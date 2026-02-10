@@ -30,4 +30,8 @@ else:
 
 # Let user input their own stat for fun
 custom_stat = input("Enter your proudest lift or reflex time: ")
+
 print(f"Damn, {custom_stat} – that's fire, homie. Keep stacking wins")
+# Your own addition – e.g. gripper flex
+gripper_reps = 20
+print(f"Gripper 60kg for {gripper_reps} perfect reps – hands like steel traps")

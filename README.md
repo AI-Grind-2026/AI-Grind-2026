@@ -1,4 +1,12 @@
-## Hi there 👋
+# AI Grind 2026 – Patryk's Journey to AI Bread & Lambo
+
+Polish tank in Köln 🇵🇱🇩🇪  
+Day 1: Python setup + first script locked in  
+Goal: Build bureaucracy-busting AI tools for small companies  
+Track progress → weekly updates here
+
+Current stats: 90kg / 183cm / 140kg bench / reflexes 170ms  
+Let's get this bag 😈
 
 <!--
 **AI-Grind-2026/AI-Grind-2026** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

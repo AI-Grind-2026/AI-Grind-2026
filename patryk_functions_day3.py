@@ -39,7 +39,38 @@ def survived_fever(days):
         print("Quick recovery – still a tank")
     return days
 
+
+def roast_day(day):
+    """Prints a day-specific roast based on the weekday string."""
+    roasts = {
+        'monday': "Mondays... you woke up the wrong side of the mass.",
+        'tuesday': "Tuesday? Same as Monday but you still didn't lift.",
+        'wednesday': "Hump day! More like slump day for your gains.",
+        'thursday': "It's almost Friday and you're still online, what a shock.",
+        'friday': "Friday night and you're coding? You need a life, bro.",
+        'saturday': "Weekend? Your excuse for skipping cardio again.",
+        'sunday': "Sunday scaries but you should be prepping not panicking.",
+    }
+    roast = roasts.get(day.lower())
+    if roast:
+        print(roast)
+    else:
+        print("That's not a weekday, try again next time—at least pick a real one.")
+    return roast
+
 # === MAIN EXECUTION – run everything here ===
+
+# Roast based on the current weekday
+while True:
+    today = input("What day is it today? ").strip()
+    if not today:
+        print("Come on, type a day of the week, bro.")
+        continue
+    roast = roast_day(today)
+    if roast:
+        break
+    # if roast was None, loop again
+
 print_beast_stats()
 
 my_bmi = calculate_bmi(90, 183)

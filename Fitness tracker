@@ -1,0 +1,95 @@
+import json
+green = "\033[32m"
+reset = "\033[0m"
+from datetime import datetime
+while True:
+    print("Welcome to the menu!")
+    print("1. Log Workout")
+    print("2. View past workouts")
+    print("3. Total volume :)")
+    print("4. Quit")
+    choice = input("Please enter your choice (1, 2, 3, or 4): ").strip()
+    if choice == "1":
+        try:
+            print("Welcome to the 'Log workout' menu") 
+            Exercise = input("What exercise did you do? Write here: ")
+            sets = int(input("How many sets did you do? Write here: "))
+            reps = int(input("How many reps did you do? Write here: "))
+            weight = int(input("How much weight did you use? Write here: "))
+            print(f"You did {sets} sets of {Exercise} with avg {reps} reps per set with {weight} kg on the bar")
+            volume = (sets*reps*weight)
+            print(f"Your total volume comes out to {green}{volume}kg{reset}")
+            
+            workout = {
+            "date": datetime.now().strftime('%d/%m/%Y %H:%M'),  
+            "exercise": Exercise,
+            "sets": sets,
+            "reps": reps, 
+            "weight": weight,
+            "volume": volume
+            }
+            
+            
+            try:
+                with open("workout.json", "r") as file:
+                    all_workout = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError):
+                all_workout = []
+            all_workout.append(workout)
+            with open("workout.json", "w") as file:
+                json.dump(all_workout, file)
+
+        except ValueError:
+            print("Invalid input, enter numbers, please!")
+
+    elif choice == "2": 
+        print("Welcome to 'View past workouts' menu")
+        print("1. All workouts")
+        print("or")
+        print("2. Todays workouts")
+        choice = input("Please enter your choice (1 or 2): ").strip()
+        if choice == "1":
+            try:
+                with open("workout.json", "r") as file:
+                    all_workout = json.load(file)
+                for workout in all_workout:
+                    print(f"{workout['date']} - {workout['exercise']} - {workout['sets']} sets - {workout['reps']} reps - {workout['weight']} weight  - {green}{workout['volume']} kg volume {reset}\n")
+            except (json.JSONDecodeError, FileNotFoundError):
+                print("No workouts logged yet")
+        if choice == "2":
+            found = False 
+            try:
+                with open("workout.json", "r") as file:
+                    all_workout = json.load(file)
+                    today = datetime.now().strftime ("%d/%m/%Y")
+                    for workout in all_workout:
+                        if workout["date"].startswith(today):
+                            print(f"{workout['date']} - {workout['exercise']} - {workout['sets']} sets - {workout['reps']} reps - {workout['weight']} weight  - {green}{workout['volume']} kg volume {reset}\n")
+                            found = True
+            except (json.JSONDecodeError, FileNotFoundError):
+                print("No workouts logged today!")
+            if not found:
+                print("No workouts logged today!")
+    elif choice == "3":
+        try:
+            with open ("workout.json", "r") as file:
+                all_workout = json.load(file)
+            total_volume = 0
+            for workout in all_workout:
+                total_volume += workout["volume"]
+            print(f"Total volume across all workouts is:{total_volume}kg")
+        except(json.JSONDecodeError, FileNotFoundError):
+            print("Something went wrong")    
+    elif choice == "4":
+        print("Thank you for using our tracker! See you later!")
+        break
+
+
+
+
+
+
+
+
+
+    

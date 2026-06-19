@@ -1,0 +1,22 @@
+import requests
+while True:
+    amount = int(input("How much are you looking to exchange?"))
+    From = input(f"From what currency? Heres a list of all the currencies: {requests.get('https://api.frankfurter.app/currencies').json()}").upper()
+    To = input(f"To what currency? Heres a list of all the currencies: {requests.get('https://api.frankfurter.app/currencies').json()}").upper()
+
+
+    url = f"https://api.frankfurter.app/latest?amount={amount}&from={From}&to={To}"
+    response = requests.get(url)
+    data = response.json()
+    try:
+        rate = data["rates"][To]
+        result = rate
+        print(f"From {amount} {From} to {result} {To}")
+    except KeyError:
+        print("Invalid currency code. Please check the list of available currencies and try again.")
+    again = input("Do you want to convert another currency? (Yes/No)").lower().strip()
+    if again != "yes":
+        break
+
+
+    

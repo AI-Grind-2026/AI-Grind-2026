@@ -1,0 +1,19 @@
+People = [                                          
+
+    {"Name": "Patryk", "Age": 20, "City": "Bergheim", "Hobby": "Szachy"},
+    {"Name": "Julka", "Age": 18, "City": "Warszawa", "Hobby": "Koszykowka"},                    #just a list with 3 dictrionaries (0,1,2)
+    {"Name": "Kacper", "Age": 22, "City": "Berlin", "Hobby": "Pilka"}
+
+]
+
+def Person(Person_slot):    #slot for ONE dictionary for exsample 0,1 or 2 and it just loops through them until it reaches 3 (Nothing in this case so it stops)
+    print(f"{Person_slot['Name']} ma {Person_slot['Age']} lat i mieszka w {Person_slot['City']}") #Takes the info like city name etc from people because thats where-
+                                                                                                  #-person slot got the info from
+
+for slot in People:   
+    Person(slot)      #and yes person slot also works perfectlym fine you dont have to use slot (its just so nobody gets confused)
+                      # example: for person_slot in People: Person(person_slot) would also work perfectly fine
+choice = input("Okim chcesz sie wiecej dowiedziec?").strip().lower().capitalize()
+for slot in People:
+    if choice == slot['Name']:
+        print(f"{slot['Name']} ma hobby {slot['Hobby']}")

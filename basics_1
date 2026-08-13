@@ -1,0 +1,16 @@
+people = [
+
+    {"Name": "Patryk", "Age": 20, "City": "Bergheim", "Hobby": "Szachy"},
+    {"Name": "Julka", "Age": 18, "City": "Warszawa", "Hobby": "koszykowka"},
+    {"Name": "Kacper", "Age": 22, "City": "Berlin", "Hobby": "Pilka"}
+]
+
+
+def person(Person_slot):
+    print(f"{Person_slot['Name']} ma {Person_slot['Age']} i mieszka w {Person_slot['City']}")
+for slot in people:
+    person(slot)
+choice = input("O jakiej osobie chcesz sie specyficznie dowiedziec?").strip().lower().capitalize()
+for slot in people:
+    if choice == slot['Name']:
+        print(f"{slot['Name']} ma hobby {slot['Hobby']}")

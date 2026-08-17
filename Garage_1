@@ -1,0 +1,6 @@
+Garage = [
+    
+
+]
+for car_slot in range(3):
+    question = input("What car do you want to park?")

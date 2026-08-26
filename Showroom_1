@@ -1,0 +1,11 @@
+Showroom =[
+
+    "M4", "C3", "Supra", "Gr86"
+]
+Sold = input("What car has been bought?").lower().capitalize()
+if Sold in Showroom:
+    print(f"The {Sold} has been sold!")
+    Showroom.remove(Sold)
+else:
+    print("The car isnt in stock.")
+print(Showroom)

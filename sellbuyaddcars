@@ -1,0 +1,21 @@
+Showroom =[
+
+    "M4", "Supra", "Gr86", "C3"
+]
+
+while True:
+    Question = input("You wanna sell, add or quit? Please dont make typos the programm will crash... ").lower().capitalize()
+    if Question == "Add":
+        car = input("What car?: ")
+        Showroom.append(car)
+    elif Question == "Sell":
+        car = input("What car?: ")
+        if car in Showroom:
+            Showroom.remove(car)
+        else:
+            print("Car not in stock or a typo")
+    elif Question == "Quit":
+        break
+    else:
+        print("Seems like you got a typo? Please check and try again... ")
+    print(Showroom)

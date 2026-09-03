@@ -1,0 +1,24 @@
+Showroom =[
+
+
+]
+
+def dealership_system():
+    while True:
+        Question = input("You wanna sell, add or quit? Please dont make typos the programm will crash... ").lower().capitalize()
+        if Question == "Add":
+            car = input("What car you wanna add?... ")
+            Showroom.append(car)
+        elif Question == "Quit":
+            break
+        elif Question == "Sell":
+            car = input("What car you wanna sell?")
+            if car in Showroom:
+                Showroom.remove(car)
+            else:
+                print("Car not in stock or a typo")
+        else:
+            print("Please try again and dont do typos I didnt programmed that yet :(... )")
+        print(Showroom)
+dealership_system()
+    

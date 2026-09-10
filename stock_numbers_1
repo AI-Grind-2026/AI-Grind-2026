@@ -1,0 +1,17 @@
+inventory ={
+
+    "Supra": 2, "M4": 0, "Gr86": 5
+}
+while True:
+    sale = input("What car did we just sell?... Or type in quit ").lower().capitalize()
+    if sale == "Quit":
+        print("Bye!")
+        break
+    elif sale in inventory:
+        if inventory[sale]>0:
+            inventory[sale]-=1
+            print(f"{sale} in stock : {inventory[sale]}... ")
+        else:
+            print("Sorry, were ouyt of stock!")
+    else:
+        print("Sorry! We dont carry that car.")

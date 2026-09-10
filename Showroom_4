@@ -1,0 +1,13 @@
+Showroom ={
+    "Supra": 45000, "M4": 70000, "Gr86": 32000
+}
+while True:
+    car_price = input("What car do you want to check the price for? Or write quit to quit... ").lower().capitalize()
+    if car_price == "Quit":
+        print("Okay, goodbye!")
+        break
+    elif car_price in Showroom:
+        print(f"{car_price} costs {Showroom[car_price]}")
+    else:
+        print("Sorry, this car is not in stock!")
+

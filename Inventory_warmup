@@ -1,0 +1,19 @@
+inventory ={
+    "Supra": 2, "M4": 0, "Gr86": 5
+}
+for car_slot in inventory:
+    if inventory[car_slot]== 0:
+        print(f"WARNING! {car_slot} is sold out!")
+    else:
+        print(f"{inventory[car_slot]} {car_slot}'s are in stock... ")
+    
+    
+inventory ={
+
+    "M4": 0, "Supra": 2, "Gr86": 5
+}    
+for car_slot in inventory:
+    if inventory[car_slot] == 0:
+        print(f"Warning! {car_slot} out of stock! ")
+    else:
+        print(f"{inventory[car_slot]} {car_slot}'s in stock...")

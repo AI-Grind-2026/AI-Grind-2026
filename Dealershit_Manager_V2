@@ -1,0 +1,27 @@
+inventory ={
+    "Supra": 2, "M4": 0, "Gr86": 5
+}
+while True:
+    Question = input("(S)ell, (R)eport or (Q)uit?... ").lower().capitalize()
+    if Question == "S" or Question == "Sell" or Question == "Sel":
+        car = input("Which car?").lower().capitalize()
+        if car in inventory:
+            if inventory[car] == 0:
+                print("We dont have the car anymore, sorry!")
+            elif inventory[car] >0:
+                inventory[car] -=1
+                print(f"We have {inventory[car]} {car}'s in stock... ")
+            else:
+                print("Either typo or we dont carry that car!")
+        else:
+            print("Typo or the car fr not in stock...")
+    elif Question == "Quit" or Question == "Q":
+        print("Goodbye!")
+        break
+    elif Question == "R" or Question == "Report":
+        for car in inventory:
+                print(f"{car} : {inventory[car]} in stock...")
+    else:
+        print("Typo?")
+    
+

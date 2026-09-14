@@ -1,0 +1,10 @@
+dictionary ={
+
+    "Supra": 45000, "M4": 70000, "Gr86": 32000
+}
+for discount in dictionary:
+    dictionary[discount] = int(dictionary[discount]*0.9)
+    print(f"Congratulations! {discount} now costs {dictionary[discount]} euros!")
+    
+    
+    

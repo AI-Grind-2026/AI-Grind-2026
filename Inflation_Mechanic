@@ -1,0 +1,6 @@
+prices ={
+    "Supra": 45000, "M4": 70000, "Gr86": 32000
+}
+for car in prices:
+    prices[car] += 2000
+    print(f"{car} now costs {prices[car]} due to inlfation.")

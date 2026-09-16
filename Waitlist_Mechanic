@@ -1,0 +1,23 @@
+dictionary ={
+    "Supra": 1, "M4": 0
+}
+waitlist = []
+while True:
+    Question = input("Do you want to (B)uy the car, join the (W)aitlist or (Q)uit?... ").lower().capitalize()
+    if Question == "Quit" or Question == "Q":
+        print("Goodbye!")
+        break
+    elif Question == "W" or Question == "Wait" or Question == "Waitlist":
+        name = input("Whats your name?").lower().capitalize()
+        waitlist.append(name)
+        print(f"Heres the waitlist: {waitlist}")
+    elif Question == "B" or Question == "Buy":
+        car = input("Which car?... ").lower().capitalize()
+        if car in dictionary and dictionary[car] >0:
+            dictionary[car] -= 1
+            print(f"Have fun with your {car} !!!")
+        else:
+            print("Sorry! Either a typo or we dont have the car, try joining the waitlist.")
+    else:
+        print("Did you check for typos?")
+       

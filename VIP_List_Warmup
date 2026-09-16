@@ -1,0 +1,8 @@
+Vip_List =[
+    "Maurice", "Muller", "Aki"
+]
+Question = input("Hey, what is your name?").lower().capitalize()
+if Question in Vip_List:
+    print("Welcome, VIP!")
+else:
+    print("Youre not on the list.")

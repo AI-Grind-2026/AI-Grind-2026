@@ -1,0 +1,20 @@
+menu = {
+    "Oil": 80, "Tires": 400, "Brakes": 250
+}
+Total = 0
+while True:
+    Question = input("What do you need? (B)rakes, (O)il, (T)ires or (C)eckout?... ").lower().capitalize()
+    if Question == "Checkout" or Question == "C":
+        print(f"Your total is: {Total} euros")
+        break
+    elif Question == "B" or Question == "Brakes":
+        Total += menu["Brakes"]
+        print(f"Your total for now is: {Total} euros")
+    elif Question == "O" or Question == "Oil":
+        Total += menu["Oil"]
+        print(f"Your total like {Total} rn")
+    elif Question == "Tires" or Question == "T":
+        Total += menu["Tires"]
+        print(F"drifts huh? {Total} euros please")
+    else:
+        print("Typo?")

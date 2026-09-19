@@ -1,0 +1,5 @@
+staff ={
+    "Maurice": 40, "Aki": 35, "Muller": 20
+}
+for worker in staff:
+    print(f"{worker} earned {staff[worker]*25} euros") 

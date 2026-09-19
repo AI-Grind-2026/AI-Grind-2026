@@ -1,0 +1,7 @@
+staff =[
+    "Maurice", "Aki", "Muller"
+]
+hours_worked ={}
+for worker in staff:
+    hours_worked[worker] = 0
+print(hours_worked)

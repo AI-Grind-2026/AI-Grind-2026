@@ -1,0 +1,8 @@
+Garage =[
+    "C3", "GT86", "Supra", "M4"
+]
+for car in Garage:
+    if car == "C3":
+        print("Taking the C3 to work!")
+    else:
+        print(f"Taking {car} to the backroads!")

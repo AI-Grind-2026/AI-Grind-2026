@@ -1,0 +1,24 @@
+Shop ={
+    "Exhaust": 500, "Coilovers": 1200, "Intake": 300,
+    "Tires": 800
+}
+Installed_Parts =[]
+wallet = 2000
+print("Thats what we have:")
+print(f"{Shop}")
+while True:
+    Question = input(f"You have {wallet} euros, what do you want to buy? Or type quit... ").lower().capitalize()
+    if Question == "Quit":
+        print("Okay, goodbye!")
+        break
+    elif Question in Shop:
+        if wallet >= Shop[Question]:
+            wallet -= Shop[Question]
+            Installed_Parts.append(Question)
+            print("Installed!")
+            print(f"The {Question} cost you {Shop[Question]}")
+            print(f"You have {wallet} euros left.")
+        else:
+            print("Not enough funds!")
+    else:
+        print("Sorry, we dont have this product. Or check for typos!")

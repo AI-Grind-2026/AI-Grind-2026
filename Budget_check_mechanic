@@ -1,0 +1,7 @@
+wallet = 1000
+exhaust = 800
+if wallet >= exhaust:
+    wallet -= exhaust
+    print(f"I can buy my exhaust! I have {wallet} euros left!")
+else:
+    print("I dont have enough money")

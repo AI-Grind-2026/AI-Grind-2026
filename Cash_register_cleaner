@@ -1,0 +1,14 @@
+menu = {
+    "Oil": 80, "Brakes": 250, "Tires": 400
+}
+Total = 0
+while True:
+    Question = input("Do you want to change your Oil, Brakes, Tires or Checkout?... ").lower().capitalize()
+    if Question in menu:
+        Total += menu[Question]
+        print("Added to your total!")
+    elif Question == "Checkout":
+        print(f"Your total is: {Total} euros.")
+        break
+    else:
+        print("Typo?")

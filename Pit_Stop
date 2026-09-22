@@ -1,0 +1,8 @@
+def Inspect_Tires(Thread_Depth):
+    if Thread_Depth < 3:
+        print("Change your tires!!!")
+    elif Thread_Depth < 5 and Thread_Depth > 3:
+        print("Thread getting low, change soon")
+    else:
+        print("Tires are in great condition ngl")
+Inspect_Tires(4)

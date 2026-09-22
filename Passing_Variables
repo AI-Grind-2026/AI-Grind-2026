@@ -1,0 +1,6 @@
+def Oil_Change(Car_Model):
+    print("Draining your oil...")
+    print("Changing the filter...")
+    print(f"Adding 5w-30 in your {Car_Model}")
+    print("Done!")
+Oil_Change("Toyota GR86")

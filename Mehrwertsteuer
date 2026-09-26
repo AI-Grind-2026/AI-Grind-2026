@@ -1,0 +1,4 @@
+def calculate_tax(Price):
+    Price*1.19
+final_price = calculate_tax(100)
+print(f"This is the final price = {final_price}")

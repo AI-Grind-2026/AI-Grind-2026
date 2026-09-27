@@ -1,0 +1,4 @@
+def Format_Car(Brand, Model):
+    return f"{Brand} {Model}"
+my_daily = Format_Car("Citroen", "C3")
+print(f"I am driving {my_daily} today.")

@@ -1,0 +1,6 @@
+def Calculate_Area(length, width):
+    area = length*width
+    return area
+Shop_Size = Calculate_Area(5, 10)
+print(f"The Garage is {Shop_Size} square meters")
+

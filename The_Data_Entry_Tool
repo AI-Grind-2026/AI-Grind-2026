@@ -1,0 +1,8 @@
+parts_bin = {
+    "Oil_Filter": 10
+}
+def add_part(Part, amount):
+    parts_bin[Part] = amount
+    print(f"{amount} of {Part} have been added!")
+add_part("Sparks", 8)
+print(parts_bin)

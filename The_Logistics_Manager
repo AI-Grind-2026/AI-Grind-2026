@@ -1,0 +1,19 @@
+Warehouse = {}
+def receive_shipment(car_model, quantity):
+    Warehouse[car_model] = quantity
+receive_shipment("Supra", 8)
+while True:
+    print("Menu:   ")
+    Question = input("(R)eceive Shipment, (V)iew inventory or (Q)uit?... ").lower().capitalize()
+    if Question == "Q" or Question == "Quit":
+        print("Goodbye then!... ")
+        break
+    elif Question == "R" or Question == "Receive" or Question == "Receive Shipment":
+        carmodel = input("What car model?").lower().capitalize()
+        if carmodel in Warehouse:
+            print("We have it! Follow further instructions... ")
+        else:
+            print("Sorry! We dont have it or check for typos!!!... ")
+    elif Question == "V" or Question == "View" or Question == "View inventory":
+        for car in Warehouse:
+            print(f"We have {Warehouse[car]} {car}'s in our warehouse!!!")

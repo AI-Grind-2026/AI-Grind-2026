@@ -1,0 +1,7 @@
+inventory = {
+    "Gt86": 3, "M4": 1
+}
+inventory["Nissan GTR"] = 2
+inventory["C3"] = 5
+for car in inventory:
+    print(f"We have {inventory[car]} {car}'s")

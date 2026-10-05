@@ -1,0 +1,13 @@
+oil_stock = {
+    "5W-30": 3
+}
+def restock_oil(oil_type, quantity):
+    oil_stock[oil_type] = quantity
+while True:
+    what_type = input("What type of oil did we receive? Or quit... ").lower().capitalize()
+    if what_type == "Q" or what_type == "Quit":
+        break
+    else:
+        how_many = int(input("And how many bottles?... "))
+        restock_oil(what_type, how_many)
+print(oil_stock)

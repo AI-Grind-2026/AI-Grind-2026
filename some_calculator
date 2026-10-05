@@ -1,0 +1,4 @@
+def calculate_profit(buy_price, sell_price):
+    return sell_price - buy_price
+my_profit = calculate_profit(2000, 2500)
+print(f"I made {my_profit} euros... ")

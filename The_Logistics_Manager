@@ -11,12 +11,9 @@ while True:
         break
     elif Question == "R" or Question == "Receive" or Question == "Receive Shipment":
         carmodel = input("What car model arrived?... ").lower().capitalize()
-        Quantity = (int(input(f"How many {carmodel}'s arrived?... ")))
-        if carmodel not in Warehouse:
-            Warehouse[carmodel] = Quantity
-            print(f"{Quantity} {carmodel}'s added!!!... ")
-        else:
-            print("Sorry! We dont have it or check for typos!!!... ")
+        Quantity = int(input(f"How many {carmodel}'s arrived?... "))
+        receive_shipment(carmodel, Quantity)
+        print(f"{Quantity} {carmodel}'s added!!!... ")
     elif Question == "V" or Question == "View" or Question == "View inventory":
         for car in Warehouse:
             print(f"We have {Warehouse[car]} {car}'s in our warehouse!!!")

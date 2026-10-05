@@ -2,6 +2,7 @@ Warehouse = {}
 def receive_shipment(car_model, quantity):
     Warehouse[car_model] = quantity
 receive_shipment("Supra", 8)
+receive_shipment("M4", 4)
 while True:
     print("Menu:   ")
     Question = input("(R)eceive Shipment, (V)iew inventory or (Q)uit?... ").lower().capitalize()
@@ -9,9 +10,11 @@ while True:
         print("Goodbye then!... ")
         break
     elif Question == "R" or Question == "Receive" or Question == "Receive Shipment":
-        carmodel = input("What car model?").lower().capitalize()
-        if carmodel in Warehouse:
-            print("We have it! Follow further instructions... ")
+        carmodel = input("What car model arrived?... ").lower().capitalize()
+        Quantity = (int(input(f"How many {carmodel}'s arrived?... ")))
+        if carmodel not in Warehouse:
+            Warehouse[carmodel] = Quantity
+            print(f"{Quantity} {carmodel}'s added!!!... ")
         else:
             print("Sorry! We dont have it or check for typos!!!... ")
     elif Question == "V" or Question == "View" or Question == "View inventory":

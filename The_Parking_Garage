@@ -1,0 +1,6 @@
+dealership = {
+    "Showroom": ["M4", "GT86"], "repair_bay": ["C3"]
+}
+dealership["Showroom"].append("Nissan GTR")
+dealership["repair_bay"].append("Supra")
+print(dealership)

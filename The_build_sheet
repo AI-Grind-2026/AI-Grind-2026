@@ -1,0 +1,14 @@
+project_car = {
+    "model": "GT86", "installed_parts": [] 
+}
+def install_part(part):
+    project_car["installed_parts"].append(part)
+    print(f"Success! The {part} has been installed to your {project_car["model"]}")
+while True:
+    Question = input("What are you installing? Or quit... ").lower().capitalize()
+    if Question == "Q" or Question == "Quit":
+        print("Goodbye!")
+        break
+    else:
+        install_part(Question)
+print(project_car)

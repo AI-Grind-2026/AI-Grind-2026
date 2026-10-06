@@ -1,0 +1,8 @@
+service_center = {
+    "waiting_list": []
+}
+def add_customer(customer_name):
+    service_center["waiting_list"].append(customer_name)
+    print(f"{customer_name} succesfully added to the waiting list!")
+add_customer("Hubert")
+print(service_center)

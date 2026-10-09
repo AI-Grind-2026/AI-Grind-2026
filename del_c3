@@ -1,0 +1,5 @@
+parking_lot = {
+    "M4": "Avaiable", "C3": "Sold", "Civic": "Wrecked"
+}
+del parking_lot["Civic"]
+print(parking_lot)

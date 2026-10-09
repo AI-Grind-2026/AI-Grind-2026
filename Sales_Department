@@ -1,0 +1,12 @@
+inventory = {
+    "Supra": 1, "M4": 2
+}
+def sell_car(car_model):
+    if car_model in inventory:
+        del inventory[car_model]
+        print(f"{car_model} has been sold!")
+    else:
+        print("We dont have that car in stock, or maybe typo?")
+sell_car("Porsche")
+sell_car("Supra")
+print(inventory)

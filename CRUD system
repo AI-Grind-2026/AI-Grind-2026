@@ -1,0 +1,29 @@
+dealership = {
+    "C3": {"Price": 5000}
+}
+def remove_car(car_model):
+    if car_model in dealership:
+        del dealership [car_model]
+    else:
+        print("Car not found check for typos")
+while True:
+    print("Menu:   ")
+    Menu = input("Do you want to (a)dd a car, (u)pdate a price, (s)ell a car or (q)uit?... ").lower().capitalize()
+    if Menu == "Q" or Menu == "Quit":
+        print("Goodbye!")
+        break
+    elif Menu == "S" or Menu == "Sell" or Menu == "Sell car":
+        car = input(f"Which car?:...  {dealership}")
+        remove_car(car)
+    elif Menu == "A" or Menu == "Add" or Menu == "Add car":
+        car = input("Which car?   ")
+        price = int(input("And what price? "))
+        dealership[car] = price
+        print("Car added... ")
+    elif Menu == "U" or Menu == "Update" or Menu == "Update price":
+        car = input(f"The price opf which car? {dealership}")
+        price = int(input("And what price? "))
+        dealership[car] = price
+    else:
+        print("Check for typos!!!")
+        

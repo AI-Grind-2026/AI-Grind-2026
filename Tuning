@@ -1,0 +1,7 @@
+garage = {
+    "Supra": {"hp": 382, "status": "Stock"}
+}
+def Install_turbo(car_model):
+    garage[car_model] = {"hp": 500, "status": "Tuned"}
+Install_turbo("Supra")
+print(garage)

@@ -1,0 +1,35 @@
+impound = {
+    "C3": {"owner": "Patryk", "fee": 500}
+}
+def release_car(car_model):
+    if car_model in impound:
+        del impound[car_model]
+    else:
+        print("Car not found check for typos")
+while True:
+    print("Menu: ")
+    menu = input("Wanna (A)dd car to impound, (U)pdate fee, (R)elease car or (Q)uit? ").lower().capitalize()
+    if menu == "Q" or menu == "Quit":
+        break
+    elif menu == "A" or menu == "Add":
+        model = input("Which model you want to add? ")
+        fee = int(input("What is the fee? "))
+        owner = input("Whats the owners name? ")
+        impound[model] = {"owner": owner, "fee": fee}
+        print("Car added!")
+    elif menu == "U" or menu == "Update":
+        model = input("Update which model? ").lower().capitalize()
+        fee = int(input("Whats the new amount? "))
+        if model in impound:
+            impound[model] = {"fee": fee}
+        else:
+            print("We dont have this car impounded. Or maybe typo> Try again... ")
+    elif menu == "R" or menu == "Release":
+        car = input("Which car? ").lower().capitalize()
+        if car in impound:
+            release_car(car)
+        else:
+            print("We dont have this car, check typos and try again. ")
+    else:
+        print("Invalid input")
+    print(impound)

@@ -1,0 +1,13 @@
+fleet = {
+    "C3": {"hp": 81, "price": 5000},
+    "Gt86": {"hp": 200, "price": 25000},
+    "Supra": {"hp": 382, "price": 55000}
+}
+def get_total_value():
+    total = 0
+    for car in fleet:
+        total += fleet[car]['price']
+    return total   #does return total send the data back to def get_total_value() above? So the info is sent back to or rather into ()? cant I just 
+#put the process into get_total_value(thye process for example this , that plus this), give me examples maybe then ill understand why its good and where are the use cases for this
+net_worth = get_total_value()
+print(f"The total value of the fleet is {net_worth} euro")

@@ -1,0 +1,40 @@
+wallet = 35000
+showroom = {
+    "C3": {"hp": 81, "price": 5000},
+    "Gt86": {"hp": 200, "price": 25000},
+    "M4": {"hp": 473, "price": 45000}
+}
+def add_car(hp, price):
+    showroom[car] = {"hp": hp, "price": price}
+while True:
+    print(f"Wallet: {wallet} euro")
+    print("Menu: ")
+    menu = input("(V)iew cars, (a)dd cars, (b)uy car or (q)uit? ").lower().capitalize()
+    if menu == "Q" or menu == "Quit":
+        print("Goodbye! ")
+        break
+    elif menu == "V" or menu == "View":
+        for car in showroom:
+            print(f"We have {car} with {showroom[car]['hp']} for {showroom[car]['price']} euros")   
+    elif menu == "A" or menu == "Add" or menu == "Add cars":   #accidently added add car, my bad hahaha
+        car = input("Whats the car? (e.g. M4, Supra etc.) ").lower().capitalize()
+        hp = int(input("How much horsepower does the car have? "))
+        price = int(input("How much does the car cost? "))
+        add_car(hp, price)
+        print(showroom)
+    elif menu == "B" or menu == "Buy" or menu == "Buy car":
+        for car in showroom:
+            print(f"We have {car}")
+        car = input("Which car would you like to buy? ").lower().capitalize()
+        if car in showroom:
+            if wallet >= showroom[car]['price']:
+                wallet -= showroom[car]['price']
+                print(f"Congratulations! The car is yours.")
+                print(wallet)
+            elif wallet < showroom[car]['price']:
+                print("Sorry! you cant afford that car yet.")
+            else:
+                print("Input error")
+    else:
+        print("Input error")
+

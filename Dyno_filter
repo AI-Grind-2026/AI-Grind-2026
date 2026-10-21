@@ -1,0 +1,8 @@
+fleet = {
+    "C3": {"hp": 81, "price": 5000},
+    "Gt86": {"hp": 200, "price": 25000},
+    "Supra": {"hp": 382, "price": 55000}
+}
+for car in fleet:
+    if fleet[car]["hp"] >= 200:
+        print(f"{car} has {fleet[car]['hp']} horsepower and is track ready")

@@ -1,0 +1,15 @@
+my_garage = {
+    "C3": {"hp": 81}, "Gt86": {"hp": 200},
+
+}
+friends_garage = {
+    "Supra": {"hp": 382}, "M4": {"hp": 473}
+
+}
+def which_garage(target_garage):
+    total_hp = 0
+    for car in target_garage:
+        total_hp += target_garage[car]["hp"]
+    return total_hp
+total_hp = which_garage(my_garage)
+print(f"Your garage has {total_hp} hp! ")

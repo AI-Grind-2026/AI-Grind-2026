@@ -1,0 +1,13 @@
+parts = {
+    "Turbo": {"price": 2000},
+    "Exhaust": {"price": 800}
+
+}
+def get_cart_total():
+    total = 0
+    for part in parts:
+        total += parts[part]["price"]
+        return total
+subtotal = get_cart_total()
+final_price = subtotal + 100
+print(f"Your total is {final_price} (incl. 100 euro shipping fee)... ") #please explain it to me step by step why everything was done the way it has

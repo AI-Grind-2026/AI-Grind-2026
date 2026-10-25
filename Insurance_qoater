@@ -1,0 +1,21 @@
+database = {
+    "C3": {"hp": 81},
+    "Gt86": {"hp": 200},
+    "M4": {"hp": 473}
+}
+def calculate_insurance_tax(car_name):
+    if database[car_name]["hp"] > 250:
+        return 300
+    else:
+        return 100
+while True:
+    print("Menu: ")
+    menu = input("Enter a car name for quote or (Q)uit: ").lower().capitalize()
+    if menu == "Q" or menu == "Quit":
+        print("Goodbye! ")
+        break
+    elif menu in database:
+        calculate_insurance_tax(menu)
+        print(f"Your tax is {calculate_insurance_tax[menu]} monthly")
+    else:
+        print("Invalid input or car not in database")

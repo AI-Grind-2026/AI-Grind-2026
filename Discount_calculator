@@ -1,0 +1,7 @@
+Catalog = {
+    "Turbo": 2000, "Coilovers": 1200, "Exhaust": 800
+}
+def apply_discount(Item_name, discount_percent):
+    return int(Catalog[Item_name] * (1 - discount_percent / 100))
+sale_price = apply_discount("Turbo", 15)
+print(f"The turbo on sale costs {sale_price}") #and a question, whats /n and is it important? And how many days till we dig deeper again?

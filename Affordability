@@ -1,0 +1,13 @@
+Dealership = {
+    "C3": 5000, "Gt86": 25000, "M4": 45000
+}
+def can_afford(car_model, bank_balance):
+    if bank_balance >= Dealership[car_model]:
+        return True
+    else:
+        return False
+bank_balance = 25000
+if can_afford("M4", bank_balance):
+    print("Congratulations!")
+else:
+    print("Broke ahh")

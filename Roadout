@@ -1,0 +1,6 @@
+warehouse = {
+    "Turbo": {"Stock": 12, "Aisle": "A1"},
+    "Exhaust": {"Stock": 5, "Aisle": "B1"}
+}
+for part, details in warehouse.items():
+    print(f"We have {details['Stock']} {part}'s in {details['Aisle']}")

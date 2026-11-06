@@ -1,0 +1,14 @@
+fleet = {
+    "C3": {"price": 5000, "Sold": True},
+    "Gt86": {"price": 25000, "Sold": False},
+    "M4": {"price": 45000, "Sold": True}
+}
+def calculate_revenue():
+    for car, details in fleet.items():
+        revenue = 0
+        if details["Sold"] == True:
+            revenue += details["price"]
+    return revenue
+total_revenue = calculate_revenue()
+print(total_revenue)
+            

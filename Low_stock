@@ -1,0 +1,10 @@
+dealership = {
+    "C3": {"qty": 1},
+    "Gt86": {"qty": 4},
+    "M4": {"qty": 0}
+}
+def check_inventory():    #I dont have to add it, but its just there so I can call it whenever I want not that its running all the time for example
+    for car, details in dealership.items():
+        if details['qty'] < 2:
+            print(f"Warning! {car} is running low with only {details['qty']} left!")
+check_inventory()
